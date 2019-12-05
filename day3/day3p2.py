@@ -1,3 +1,5 @@
+# doesnt work
+
 f1 = open("path1.txt", "r")
 f2 = open("path2.txt", "r")
 p1 = f1.read()
