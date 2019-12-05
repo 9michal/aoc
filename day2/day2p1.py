@@ -6,7 +6,6 @@ ints = ints.split(",")
 for i in range(len(ints)):
     ints[i] = int(ints[i])
  
-print(ints)
 n = len(ints)
 
 for i in range(0, n-1, 4):
@@ -23,4 +22,4 @@ for i in range(0, n-1, 4):
     elif (i1 == 99):
         break
  
-print(ints)
+print(ints[0])
