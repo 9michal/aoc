@@ -1,8 +1,9 @@
-input = open("data.txt", "r")
+file = open("data.txt", "r")
 
-ints = input.read()
+ints = file.read()
 ints = ints.split(",")
- 
+file.close()
+
 for i in range(len(ints)):
     ints[i] = int(ints[i])
 

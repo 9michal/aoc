@@ -1,11 +1,13 @@
-input = open("data.txt", "r")
+file = open("data.txt", "r")
 
-ints = input.read()
+ints = file.read()
 ints = ints.split(",")
  
 for i in range(len(ints)):
     ints[i] = int(ints[i])
- 
+
+data.close()
+
 n = len(ints)
 
 for i in range(0, n-1, 4):
