@@ -9,31 +9,31 @@ for i in range(len(ints)):
 
 n = len(ints)
 
-def code(noun: int, verb: int):
-    ints_copy = ints.copy()
-    ints_copy[1] = noun
-    ints_copy[2] = verb
-    instruction = ints_copy[i]
-    while instruction != 99:
-        instruction = ints_copy[i]
-        i2 = ints_copy[i+1]
-        i3 = ints_copy[i+2]
-        i4 = ints_copy[i+3]
-        # i1 = 1: add i2 and i3, i1 = 2: multiply i2 and i3
-        # save in i4
-        if (instruction == 1):
-            ints_copy[i4] = ints_copy[i2] + ints_copy[i3]
-        elif (instruction == 2):
-            ints_copy[i4] = ints_copy[i2] * ints_copy[i3]
-        elif (instruction == 3):
-            ints_copy[i2] = int(input("in: "))
-        elif (instruction == 4):
-            print(i2)
-        elif (instruction == 99):
-            break
-    return ints_copy[0]
+i = 0
 
-for i in range(100):
-    for j in range(100):
-        if code(i, j) == 19690720:
-            print(100*i+j)
+while str(ints[i])[:-3:-1] != "99": # DE (last two numbers) in opcode is not 99
+    full = str(ints[i]).zfill(5) # zfill is for 0 at the begining of string
+    instruction = int(full[3:]) # DE
+
+    if (instruction == 1):
+        i1 = ints[i + 1] if full[2] == '1' else ints[ints[i + 1]]
+        i2 = ints[i + 2] if full[1] == '1' else ints[ints[i + 2]]
+        i3 = ints[i + 3]
+        ints[i3] = i1 + i2
+        i += 4
+    elif (instruction == 2):
+        i1 = ints[i + 1] if full[2] == '1' else ints[ints[i + 1]]
+        i2 = ints[i + 2] if full[1] == '1' else ints[ints[i + 2]]
+        i3 = ints[i + 3]
+        ints[i3] = i1 * i2
+        i += 4
+    elif (instruction == 3):
+        ints[ints[i + 1]] = 1
+        i += 2
+    elif (instruction == 4):
+        i1 = ints[i + 1] if full[2] == '1' else ints[ints[i + 1]]
+        print(i1)
+        i += 2
+
+
+
