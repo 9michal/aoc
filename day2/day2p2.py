@@ -9,7 +9,7 @@ for i in range(len(ints)):
 
 n = len(ints)
 
-def code(noun: int, verb: int):
+def opc(noun: int, verb: int):
     ints_copy = ints.copy()
     ints_copy[1] = noun
     ints_copy[2] = verb
@@ -30,5 +30,5 @@ def code(noun: int, verb: int):
 
 for i in range(100):
     for j in range(100):
-        if code(i, j) == 19690720:
+        if opc(i, j) == 19690720:
             print(100*i+j)

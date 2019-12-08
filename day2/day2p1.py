@@ -2,11 +2,10 @@ file = open("data.txt", "r")
 
 ints = file.read()
 ints = ints.split(",")
- 
+file.close()
+
 for i in range(len(ints)):
     ints[i] = int(ints[i])
-
-data.close()
 
 n = len(ints)
 
