@@ -7,9 +7,7 @@ x, y = 6, 25
 size = x * y
 
 listOfLayers = []
-
-for i in range(0, len(ints)-1, size):
-	listOfLayers.append(ints[i:i + size])
+listOfLayers = [ints[i:i + size] for i in range(0, len(ints), size)]
 
 zeroLayer = list(layer.count("0") for layer in listOfLayers)
 zeroLayerIndex = zeroLayer.index(min(zeroLayer))
