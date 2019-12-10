@@ -1,9 +1,10 @@
 import math
 
 def main():
-    fsum = 0
     file = open("mass.txt", "r")
     f = file.readlines()
+
+    fsum = 0
     arr_len = len(f)
 
     for i in range(arr_len):
