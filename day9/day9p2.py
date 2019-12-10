@@ -44,9 +44,9 @@ while str(ints[i])[:-3:-1] != '99':     # DE (last two numbers) in opcode is not
 
     elif (instruction == 3):
         if full[2] == '0' or full[2] == '1':
-            ints[ints[i + 1]] = 2               # 2 instead 1
+            ints[ints[i + 1]] = 2                   # 2 instead 1
         elif full[2] == '2':
-            ints[ints[i + 1] + relative] = 2    # 2 instead 1
+            ints[ints[i + 1] + relative] = 2        # 2 instead 1
         i += 2
 
     elif (instruction == 4):
