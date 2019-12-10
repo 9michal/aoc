@@ -1,5 +1,4 @@
 file = open("file.txt", "r")
-
 ints = file.read()
 file.close()
 
