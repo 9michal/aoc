@@ -1,7 +1,9 @@
 f1 = open("path1.txt", "r")
 f2 = open("path2.txt", "r")
+
 p1 = f1.read()
 p2 = f2.read()
+
 path1 = p1.split(",")
 path2 = p2.split(",")
 
