@@ -2,6 +2,7 @@ file = open("file.txt", "r")
 
 ints = file.read()
 ints = ints.split(",")
+
 file.close()
 
 for i in range(len(ints)):
