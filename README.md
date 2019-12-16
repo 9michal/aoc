@@ -12,4 +12,8 @@ Day 8: both\
 Day 9: both\
 Day 10: nothing\
 Day 11: nothing\
-Day 12: nothing
+Day 12: nothing\
+Day 13: nothing\
+Day 14: nothing\
+Day 15: nothing\
+Day 16:
