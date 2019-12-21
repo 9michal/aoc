@@ -10,4 +10,4 @@ Day 6: both\
 Day 7: first\
 Day 8: both\
 Day 9: both\
-Day 16:
+Day 16: .
